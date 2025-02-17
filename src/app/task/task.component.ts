@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Task } from '../models/task.model';
 
 @Component({
   selector: 'app-task',
@@ -7,7 +8,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './task.component.css'
 })
 export default class TaskComponent {
-  @Input() task: any;
-  @Output() onPinTask = new EventEmitter<Event>();
-  @Output() onArchiveTask = new EventEmitter<Event>();
+  @Input() task?: Task;
+  @Output() onPinTask = new EventEmitter<string>();
+  @Output() onArchiveTask = new EventEmitter<string>();
+
+  onPin(id: string): void {
+    this.onPinTask.emit(id);
+  }
+
+  onArchive(id: string): void {
+    this.onArchiveTask.emit(id);
+  }
 }

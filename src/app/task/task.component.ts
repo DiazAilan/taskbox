@@ -5,7 +5,7 @@ import { Task } from '../models/task.model';
   selector: 'app-task',
   standalone: false,
   templateUrl: './task.component.html',
-  styleUrl: './task.component.css'
+  styleUrl: './task.component.scss'
 })
 export default class TaskComponent {
   @Input() task?: Task;

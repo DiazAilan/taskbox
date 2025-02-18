@@ -77,7 +77,7 @@ import type { User } from './User';
       </div>
     </section>
   </article>`,
-  styleUrls: ['./page.css'],
+  styleUrls: ['./page.scss'],
 })
 export default class PageComponent {
   user: User | null = null;

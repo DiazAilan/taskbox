@@ -1,14 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Task } from '../models/task.model';
+import { Task } from '../../models/task.model';
 
 @Component({
-  selector: 'app-task-list',
+  selector: 'app-pure-task-list',
   standalone: false,
-  templateUrl: './task-list.component.html',
-  styleUrl: './task-list.component.css'
+  templateUrl: './pure-task-list.component.html',
+  styleUrl: './pure-task-list.component.scss'
 })
-export class TaskListComponent {
-  
+export default class PureTaskListComponent {
   tasksInOrder: Task[] = [];
 
   @Input() loading = false;

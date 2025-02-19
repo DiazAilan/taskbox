@@ -363,12 +363,16 @@ textarea {
 }
 
 .loading-item .glow-checkbox,
-.loading-item .glow-text span {
-  animation: glow 1.5s ease-in-out infinite;
-  background: #eee;
-  color: transparent;
-  cursor: progress;
-  display: inline-block;
+.loading-item .glow-text {
+  &-placeholder {
+    width: 120px;
+    height: 16px;
+    background: #eee;
+    animation: glow 1.5s ease-in-out infinite;
+    color: transparent;
+    cursor: progress;
+    display: inline-block;
+  }
 }
 
 .loading-item .glow-checkbox {

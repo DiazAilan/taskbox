@@ -15,11 +15,11 @@ export default class TaskListComponent {
      this.tasks$ = store.select((state) => state.taskbox.tasks);
   }
 
-  archiveTask(id: string) {
+  archiveTask(id: string): void {
     this.store.dispatch(new ArchiveTask(id));
   }
 
-  pinTask(id: string) {
+  pinTask(id: string): void {
     this.store.dispatch(new PinTask(id));
   }
 }

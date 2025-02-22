@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-inbox-screen',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './inbox-screen.component.scss'
 })
 export default class InboxScreenComponent {
-
+  @Input() error$: Observable<any> = of(null);
 }
